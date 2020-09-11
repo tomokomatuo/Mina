@@ -5,4 +5,8 @@ Rails.application.routes.draw do
     # この記述を追記
     omniauth_callbacks: "users/omniauth_callbacks"
   }
+  resources :events
+  resources :blogs
+  resources :questions
+  resources :profiles
 end
