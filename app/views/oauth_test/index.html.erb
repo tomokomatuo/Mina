@@ -7,6 +7,12 @@
 
 <% if user_signed_in? && current_user.nickname.present? %>
 <%= link_to 'イベントを見る', events_path %>
-<%= link_to 'プロフィールを作成する', new_profile_path %>
+<%= link_to 'プロフィール詳細を見る', profile_path(current_user.id) %>
 <%= link_to 'Q & A コーナーを見る', questions_path %>
+<% end %>
+
+<% if user_signed_in? %>
+<% unless current_user.nickname.present? %>
+<%= link_to 'プロフィールを作成する', new_profile_path %>
+<% end %>
 <% end %>
