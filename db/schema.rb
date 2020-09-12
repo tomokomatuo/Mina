@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_09_11_074349) do
     t.integer "gender"
     t.text "image"
     t.text "introduction"
-    t.string "nickname", null: false
+    t.string "nickname"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "provider", default: "", null: false

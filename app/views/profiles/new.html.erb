@@ -1,0 +1,39 @@
+<h2>プロフィール作成</h2>
+  <%= form_with(model: @oauth_test, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :ニックネーム %>
+      <%= f.text_field :nickname %>
+    </div>
+
+  <div class="field">
+    <%= f.label :年齢 %>
+    <%= f.select :age, [['２０代', '２０代'], ['３０代', '３０代'],  ['４０代', '４０代'], ['５０代以上', '５０代以上']] %>
+  </div>
+  
+  <div class="field">
+  <%= f.label :性別 %>
+  <div class="radio-inline">
+    <%= f.radio_button :gender, :男性, checked: "checked" %>
+    <%= f.label :男性, class: "gender_label" %>
+  </div>
+  
+  <div class="radio-inline">
+    <%= f.radio_button :gender, :女性 %>
+    <%= f.label :女性, class: "gender_label" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :自由記入欄 %>
+    <%= f.text_area :introduction %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :プロフィール画像 %>
+    <p class="profile"><%= f.file_field :image %></p>
+  </div>
+ 
+  <div class="action field">
+    <%= f.submit '登録' %>
+  </div>
+
+  <% end %>
