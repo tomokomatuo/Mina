@@ -1,5 +1,5 @@
 <h2>プロフィール作成</h2>
-  <%= form_with(model: @oauth_test, local: true) do |f| %>
+  <%= form_with(model: @profile, url: profiles_path, local: true) do |f| %>
     <div class="field">
       <%= f.label :ニックネーム %>
       <%= f.text_field :nickname %>

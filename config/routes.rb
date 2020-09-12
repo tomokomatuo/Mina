@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :blogs
   resources :questions
   resources :profiles
-  post '/profiles/:id' => 'profiles#show'
+  post "/profiles/new" => 'profiles#create'
 end
